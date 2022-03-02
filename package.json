@@ -2,18 +2,18 @@
   "name": "zoid-react-end-to-end",
   "version": "1.0.0",
   "description": "An example of how to use zoid's react component cloned from original repo",
-  "main": "index.htm",
+  "main": "index.html",
   "scripts": {
-    "start": "parcel index.htm --open",
-    "build": "parcel build index.htm"
+    "start": "serve"
   },
-  "dependencies": { "parcel-bundler": "^1.6.1" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artmanque/zoid-react-end-to-end.git"
+  },
+  "author": "Abdul R. Tay",
+  "license": "UNLICENSED",
   "devDependencies": {
-    "@babel/core": "7.2.0",
-    "typescript": "4.4.4"
-  },
-  "resolutions": {
-    "@babel/preset-env": "7.13.8"
+    "serve": "^11.2.0"
   },
   "keywords": ["javascript", "zoid", "react"]
 }
