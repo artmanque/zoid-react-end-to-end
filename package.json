@@ -1,0 +1,19 @@
+{
+  "name": "zoid-react-end-to-end",
+  "version": "1.0.0",
+  "description": "An example of how to use zoid's react component cloned from original repo",
+  "main": "index.htm",
+  "scripts": {
+    "start": "parcel index.htm --open",
+    "build": "parcel build index.htm"
+  },
+  "dependencies": { "parcel-bundler": "^1.6.1" },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "typescript": "4.4.4"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  },
+  "keywords": ["javascript", "zoid", "react"]
+}
