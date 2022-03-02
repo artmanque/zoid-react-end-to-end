@@ -27,21 +27,29 @@
     function App() {
       const [loggedIn, setLoggedIn] = React.useState(false);
       const [email, setEmail] = React.useState("foo@bar.com");
+      const [isLogginIn, setIsLogginIn] = React.useState(false);
       const LoginZoidReactComponentRef = React.useRef(null);
 
       let onLogin = (email) => {
-        LoginZoidReactComponentRef.current?.state.parent.close();
+        if (LoginZoidReactComponentRef.current)
+          LoginZoidReactComponentRef.current.state.parent.close();
+        setIsLogginIn(false);
         setEmail(email);
         setLoggedIn(true);
       };
 
+      const handleLogin = (event) => {
+        setIsLogginIn(true);
+      };
+
       return (
         <div>
-          <h3>Log in on xyz.com</h3>
+          <h3>
+            <button onClick={handleLogin}>Log in</button> on xyz.com
+          </h3>
 
-          {loggedIn ? (
-            <p>User logged in with email: {email}</p>
-          ) : (
+          {loggedIn && <p>User logged in with email: {email}</p>}
+          {isLogginIn && (
             <LoginZoidReactComponent
               ref={LoginZoidReactComponentRef}
               prefilledEmail={email}
